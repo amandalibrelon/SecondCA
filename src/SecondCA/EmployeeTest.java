@@ -44,6 +44,8 @@ public class EmployeeTest {
                System.out.println(emp.getName() + "'s email address is valid.");
            } else {
                System.out.println(emp.getName() + "'s email address is not valid.");
+           }
+       } 
     }
         public static boolean isValidEmail(String email) {
         // regex pattern for email validation
