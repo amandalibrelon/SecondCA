@@ -57,6 +57,21 @@ public class Company {
             }
             System.out.println("Employee not found"); 
         }
+            // method to get staff number
+        public int getStaffNumber() {
+          return staff.size();
+        }
+            
+            
+            
+            
+        
+            
+} 
+            
+        
+        
+        
         
         
         
@@ -67,6 +82,6 @@ public class Company {
         
             
    
-    }
+    
 
 
