@@ -27,7 +27,23 @@ public class EmployeeTest {
        // printing out the value of variable nextEmpNum 
         System.out.println("Value of nextEmpNum: " + Employee.getNextEmpNum());
         
-
+       // searching and displaying employees with empNum above m
+       int m = 0;
+       
+        System.out.println("Employees with employee number above: " + m);
+           for (Employee emp : projectGroup) {
+               if (emp.getEmpNum() > m) {
+                System.out.println(emp.getName());   
+               }
+                
+            }
+       // check for a valid email
+        
+       for (Employee emp : projectGroup) {
+           if (isValidEmail(emp.getEmail())) {
+               System.out.println(emp.getName() + "'s email address is valid.");
+           } else {
+               System.out.println(emp.getName() + "'s email address is not valid.");
     }
         public static boolean isValidEmail(String email) {
         // regex pattern for email validation
