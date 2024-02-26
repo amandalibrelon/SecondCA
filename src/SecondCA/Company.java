@@ -6,6 +6,7 @@ package SecondCA;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  *
@@ -16,12 +17,21 @@ public class Company {
     private ArrayList<Employee> staff;
     private HashSet<Integer> staffSet;
     
+    // default constructor
     public Company() {
     this.companyName = "";
     this.staff = new ArrayList <>();
     this.staffSet = new HashSet<>();
+    }
     
-}
+    // overload constructor
+    public Company(String name) {
+        this.companyName = name;
+        this.staff = new ArrayList <>();
+        this.staffSet = new HashSet<>();
+        
+    }
+   
 
     //adding new employee
     public void addNewStaff(Employee employee) {
@@ -31,6 +41,24 @@ public class Company {
         } else {
             System.out.println("Employee with the same employee number already exists");    
         }
+    }
+        
+        // removing employee
+        public void removeStaff(int empNum) {
+            Iterator<Employee> iterator = staff.iterator();
+            while (iterator.hasNext()) {
+                Employee employee = iterator.next();
+                if (employee.getEmpNum() == empNum) {
+                    iterator.remove();
+                    staffSet.remove(empNum);
+                    System.out.println("Employee removed");
+                    return;
+                }
+            }
+            System.out.println("Employee not found"); 
+        }
+        
+        
         
         
         
@@ -41,4 +69,4 @@ public class Company {
    
     }
 
-}
+
