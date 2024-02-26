@@ -61,6 +61,16 @@ public class Company {
         public int getStaffNumber() {
           return staff.size();
         }
+         
+        // listing employees above a given employee number
+        public void listEmployees(int empNumThreshold) {
+            System.out.println("Employee above employee number " + empNumThreshold + ":");
+            for (Employee employee : staff) {
+                if (employee.getEmpNum() > empNumThreshold) {
+                    System.out.println(employee.getEmpNum());
+                }
+            }
+        }
             
             
             
