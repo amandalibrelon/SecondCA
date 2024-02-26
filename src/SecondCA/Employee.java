@@ -10,7 +10,7 @@ package SecondCA;
  * @author amand
  */
 public class Employee {
-       public String name;
+    public String name;
     public String email;
     public int empNum;
     public static int nextEmpNum = 1;
