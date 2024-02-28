@@ -15,9 +15,13 @@ public class Employee {
     public String email;
     public int empNum;
     public static int nextEmpNum = 1;
-
+    private int Manager;
+    String username;
+    String password;
+    
+    
 // constructor with default values
-    public Employee() {
+    public Employee(int par, String manager) {
         this.name = "";
         this.email = "";
         this.empNum = nextEmpNum++;
@@ -32,7 +36,24 @@ public class Employee {
     }
     
     // accessor methos
+    
+    public String getUsername(){
+        return username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
+       
+    }
 
+    public String getPassword() {
+        return password;
+    }
+        
+    public void setPassword(String password) {
+        this.password = password;
+    
+    }
     public String getName() {
         return name;
 
