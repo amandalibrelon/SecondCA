@@ -76,20 +76,59 @@ public class Company {
 
     public static void main(String[] args) {
 
-            Scanner sc = new Scanner(System.in);
-            Company company = new Company("MyCompany");
+        Scanner sc = new Scanner(System.in);
+        Company company = new Company("MyCompany");
 
-            // Adding a manager 
-            Employee manager = new Employee(1,"Manager");
-            company.addNewStaff(manager);
-            manager.setUsername("Gnomeo");
-            manager.setPassword("Smurf");
-           
-            
-            
-              
-        }
+        // Adding a manager 
+        Employee manager = new Employee(1, "Manager");
+        company.addNewStaff(manager);
+        manager.setUsername("Gnomeo");
+        manager.setPassword("Smurf");
+
+        // creating Menu
+        int choice;
+        do {
+            System.out.println("\nMenu");
+            System.out.println("1. View current staff");
+            System.out.println("2. Add new staff");
+            System.out.println("3. Remove staff");
+            System.out.println("4. Exit");
+            System.out.println("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    // view current staff
+                    System.out.println("Number of employees " + company.getStaffNumber());
+                    break;
+
+                case 2:
+                    //adding new staff
+                    System.out.println("Enter employee number: ");
+                    int empNum = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Enter employee name: ");
+                    String empName = sc.nextLine();
+                    Employee newEmployee = new Employee(empNum, empName);
+                    company.addNewStaff(newEmployee);
+                    break;
+
+                case 3:
+                    //removing staff
+                    System.out.println("Enter employee number to remove: ");
+                    int empNumToRemove = sc.nextInt();
+                    break;
+                case 4:
+                    // exit
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Incorrect choice!");
+
+            }
+        } while (choice != 4);
+
+        sc.close();
 
     }
-
-
+}
