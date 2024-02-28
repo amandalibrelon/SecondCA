@@ -84,6 +84,8 @@ public class Company {
             company.addNewStaff(manager);
             manager.setUsername("Gnomeo");
             manager.setPassword("Smurf");
+           
+            
             
               
         }

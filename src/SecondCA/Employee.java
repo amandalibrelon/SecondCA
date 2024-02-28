@@ -15,7 +15,6 @@ public class Employee {
     public String email;
     public int empNum;
     public static int nextEmpNum = 1;
-    private int Manager;
     String username;
     String password;
     
